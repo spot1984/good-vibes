@@ -35,17 +35,18 @@
 
 // Song to play
 // 1 Toccata and Fugue in Dm
-// 2 Fur Elise
-// 3 Brandenburg Concerto #3
-// 4 Korobeiniki (Tetris theme)
-// 5 In the hall of the Mountain King
-// 6 Super Mario Bros Theme
-// 7 Sweet Child of Mine
-// 8 Brandenburg-Concerto-Nr-5-Bwv-1047
-// 9 Tubular Bells (The Exorcist Theme)
-// 10 Godzilla
-// 11 Blister in the Sun
-#define MIDI_SONG 11
+// 2 Solfeggietto
+// 3 Fur Elise
+// 4 Brandenburg Concerto #3
+// 5 Korobeiniki (Tetris theme)
+// 6 In the hall of the Mountain King
+// 7 Super Mario Bros Theme
+// 8 Sweet Child of Mine
+// 9 Brandenburg-Concerto-Nr-5-Bwv-1047
+// 10 Tubular Bells (The Exorcist Theme)
+// 11 Godzilla
+// 12 Blister in the Sun
+#define MIDI_SONG 12
 
 #if MIDI_SONG==1
 #   if AUDIO_VOICES==4
@@ -58,6 +59,15 @@ const AL_Instrument *pinstrument= &audio_instrument_synth;
 
 #elif MIDI_SONG==2
 #   if AUDIO_VOICES==4
+#   include "music/solfeggietto.mid4.c"
+#   elif AUDIO_VOICES==8
+#   include "music/solfeggietto.mid8.c"
+#   endif
+extern const AL_Instrument audio_instrument_synth;
+const AL_Instrument *pinstrument= &audio_instrument_synth;
+
+#elif MIDI_SONG==3
+#   if AUDIO_VOICES==4
 #   include "music/Fur_Elise.mid4.c"
 #   elif AUDIO_VOICES==8
 #   include "music/Fur_Elise.mid8.c"
@@ -65,7 +75,7 @@ const AL_Instrument *pinstrument= &audio_instrument_synth;
 extern const AL_Instrument audio_instrument_piano;
 const AL_Instrument *pinstrument= &audio_instrument_piano;
 
-#elif MIDI_SONG==3
+#elif MIDI_SONG==4
 #   if AUDIO_VOICES==4
 #   include "music/brand3.mid4.c"
 #   elif AUDIO_VOICES==8
@@ -74,7 +84,7 @@ const AL_Instrument *pinstrument= &audio_instrument_piano;
 extern const AL_Instrument audio_instrument_synth;
 const AL_Instrument *pinstrument= &audio_instrument_synth;
 
-#elif MIDI_SONG==4
+#elif MIDI_SONG==5
 #   if AUDIO_VOICES==4
 #   include "music/korobeiniki.mid4.c"
 #   elif AUDIO_VOICES==8
@@ -83,7 +93,7 @@ const AL_Instrument *pinstrument= &audio_instrument_synth;
 extern const AL_Instrument audio_instrument_8bit;
 const AL_Instrument *pinstrument= &audio_instrument_8bit;
 
-#elif MIDI_SONG==5
+#elif MIDI_SONG==6
 #   if AUDIO_VOICES==4
 #   include "music/In_the_hall_of_the_Mountain_King.mid4.c"
 #   elif AUDIO_VOICES==8
@@ -92,7 +102,7 @@ const AL_Instrument *pinstrument= &audio_instrument_8bit;
 extern const AL_Instrument audio_instrument_synth;
 const AL_Instrument *pinstrument= &audio_instrument_synth;
 
-#elif MIDI_SONG==6
+#elif MIDI_SONG==7
 #   if AUDIO_VOICES==4
 #   include "music/Super_Mario_Bros_Theme.mid4.c"
 #   elif AUDIO_VOICES==8
@@ -101,7 +111,7 @@ const AL_Instrument *pinstrument= &audio_instrument_synth;
 extern const AL_Instrument audio_instrument_violin;
 const AL_Instrument *pinstrument= &audio_instrument_violin;
 
-#elif MIDI_SONG==7
+#elif MIDI_SONG==8
 #   if AUDIO_VOICES==4
 #   include "music/sweetchildofmine.mid4.c"
 #   elif AUDIO_VOICES==8
@@ -110,7 +120,7 @@ const AL_Instrument *pinstrument= &audio_instrument_violin;
 extern const AL_Instrument audio_instrument_violin;
 const AL_Instrument *pinstrument= &audio_instrument_violin;
 
-#elif MIDI_SONG==8
+#elif MIDI_SONG==9
 #   if AUDIO_VOICES==4
 #   include "music/Brandenburg-Concerto-Nr-5-Bwv-1047.mid4.c"
 #   elif AUDIO_VOICES==8
@@ -119,7 +129,7 @@ const AL_Instrument *pinstrument= &audio_instrument_violin;
 extern const AL_Instrument audio_instrument_8bit;
 const AL_Instrument *pinstrument= &audio_instrument_8bit;
 
-#elif MIDI_SONG==9
+#elif MIDI_SONG==10
 #   if AUDIO_VOICES==4
 #   include "music/tubbell1.mid4.c"
 #   elif AUDIO_VOICES==8
@@ -128,7 +138,7 @@ const AL_Instrument *pinstrument= &audio_instrument_8bit;
 extern const AL_Instrument audio_instrument_vibraphone;
 const AL_Instrument *pinstrument= &audio_instrument_vibraphone;
 
-#elif MIDI_SONG==10
+#elif MIDI_SONG==11
 #   if AUDIO_VOICES==4
 #   include "music/godzilla-30.mid4.c"
 #   elif AUDIO_VOICES==8
@@ -137,7 +147,7 @@ const AL_Instrument *pinstrument= &audio_instrument_vibraphone;
 extern const AL_Instrument audio_instrument_synth;
 const AL_Instrument *pinstrument= &audio_instrument_synth;
 
-#elif MIDI_SONG==11
+#elif MIDI_SONG==12
 #   if AUDIO_VOICES==4
 #   include "music/blister.mid4.c"
 #   elif AUDIO_VOICES==8
