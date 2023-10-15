@@ -27,7 +27,6 @@ The Audio library is a device independent library to create sound and music.  Th
 The mini MIDI library is able to play songs converted from MIDI files by the python script accompanying the library.  The midiconverter.py script can convert MIDI files into a source code that can be compiled into the application and played back.
 
 ## Development Reference
-* [General audio and mini MIDI description](README.md)
 * [Detailed audio and mini MIDI library API and details](audiolib/README.md)
 
 ## Examples for ch32v001
