@@ -109,7 +109,7 @@ PWM audio output is on PD0, connect it and ground to a high impedance amplified 
 [audio_configuration.h](audio_configuration.h) Configures the good-vibes audio library for four or eight voices on one output channel with a playback and PWM frequency of 16000 samples per second.
 
 ### Shared folder
-[../audio_shared](../audio_shared) The folder of shared audio source files used in multiple samples:
+[audio_shared](../audio_shared) The folder of shared audio source files used in multiple samples:
 * [audio_instruments.c](../audio_shared/audio_instruments.c) Instrument definitions that may be shared in examples or used in projects
 * [audio_hal_ch32v003.h](../audio_shared/audio_hal_ch32v003.h) Hardware abstraction header for the ch32V003 RISC V processor (does not require user modification)
 

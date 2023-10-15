@@ -27,7 +27,7 @@ PWM audio output is on PD0, connect it and ground to a high impedance amplified 
 
 
 ### Shared folder
-[../audio_shared](../audio_shared) The folder of shared audio source files used in multiple samples:
+[audio_shared](../audio_shared) The folder of shared audio source files used in multiple samples:
 * [audio_instruments.c](../audio_shared/audio_instruments.c) Instrument definitions that may be shared in examples or used in projects
 * [audio_hal_ch32v003.h](../audio_shared/audio_hal_ch32v003.h) Hardware abstraction header for the ch32V003 RISC V processor (does not require user modification)
 
