@@ -1,6 +1,6 @@
 '''
     midiconverter.py
-    mini midi converter for good-vibes audio library midi player 
+    mini MIDI converter for good-vibes audio library MIDI player 
     (c) 2023 D. Scott Williamson
     spot1984@gmail.com
        
@@ -25,7 +25,7 @@
     
     Usage:
         python midiconverter.py input_midi output_c [byte_count]
-            input_midi    input midi filespec to be converted
+            input_midi    input MIDI filespec to be converted
             output_c      output c filespec, this file will be overwritten without warning!
             voices        number of voices
             byte_count    byte count limit for output file
@@ -81,7 +81,7 @@ import sys
 def usage():
     #      0123456789001234567890012345678900123456789001234567890012345678900123456789001234567890
     print("midiconverter.py")
-    print("Mini-midi converter for use with CH32V003 mini-midi player")
+    print("Mini-midi converter for use with good-vibes mini MIDI player")
     print("by D. Scott Williamson 2023")
     print("")
     print("Usage:")
