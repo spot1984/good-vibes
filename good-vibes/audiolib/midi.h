@@ -34,16 +34,16 @@ typedef struct
 // Initialize music player
 void midi_player_initialize(void);    
 
-// Start playing a mini midi song
+// Start playing a mini MIDI song
 void midi_player_start_song(uint16_t channel, uint8_t *psong);
 
-// Stop playing a mini midi song
+// Stop playing a mini MIDI song
 void midi_player_stop_song(void);
 
-// Return true if mini midi player is playing a song
+// Return true if mini MIDI player is playing a song
 uint16_t midi_player_playing_song(void);
 
-// Midi update to be called at 44.1 kHz
+// MIDI update to be called at audio playback frequency
 void midi_player_update(void);
 
 // Release music player
