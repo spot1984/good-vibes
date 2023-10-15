@@ -27,9 +27,9 @@ PWM audio output is on PD0, connect it and ground to a high impedance amplified 
 
 [audio_configuration.h](audio_configuration.h) Configures the good-vibes audio library:
 * One output channel
-* One voice per output channel (2^0^)
+* One voice per output channel (2^0)
 * playback and PWM frequency of 32000 samples per second
-* Audio FIFO buffer size of 256 bytes (2^8^)
+* Audio FIFO buffer size of 256 bytes (2^8)
 
 ### Shared folder
 [audio_shared](../audio_shared) The folder of shared audio source files used in multiple samples:
