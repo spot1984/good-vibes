@@ -419,17 +419,17 @@ void audio_update( void )
 // Get the value of an output pin
 unsigned char audio_get_channel_value(uint16_t channel)
 {   
-    // Make the signed output value a positive integer, zero at half the AUDIO_TIMER_RELOAD
-    int16_t value = audio_system.channel[channel].output_value+(AUDIO_TIMER_RELOAD/2);
+    // Make the signed output value a positive byte for the FIFO
+    int16_t value = audio_system.channel[channel].output_value+128;
 
-    // Clamp to PWM range (some headroom over the designed 0-255 based on playback frequency)
+    // Clamp to PWM range to prevent wrapping
     if (value<0)  
     {
         value=0;
     }
-    if (value>AUDIO_TIMER_RELOAD) 
+    if (value>255) 
     {
-        value=AUDIO_TIMER_RELOAD;
+        value=255;
     }
 
     return (unsigned char) value;
