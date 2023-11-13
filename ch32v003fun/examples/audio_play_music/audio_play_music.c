@@ -46,7 +46,7 @@
 // 10 Tubular Bells (The Exorcist Theme)
 // 11 Godzilla
 // 12 Blister in the Sun
-#define MIDI_SONG 12
+#define MIDI_SONG 4
 
 #if MIDI_SONG==1
 #   if AUDIO_VOICES==4
